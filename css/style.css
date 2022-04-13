@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@200&family=Overpass&display=swap');
+
+:root {
+
+--submit-btn: hsl(25, 97%, 53%);
+--card-header: hsl(0, 0%, 100%);
+--Light-Grey: hsl(217, 12%, 63%);
+--card-text: hsl(216, 12%, 54%);
+--body-background: hsl(213, 19%, 18%);
+--card: hsl(216, 72%, 23%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--body-background);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   margin-top: 5em;
+}
+
+#thanks {
+    display: none;
+}
+
+
+.container .card {
+    background-color: var(--card);
+    width: 375px;
+    height: 375px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 15px;
+    padding: 25px;
+}
+
+.container .card .icon {
+    background-color: var(--body-background);
+    color: var(--card-text);
+    text-align: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.container .card .icon img {
+    padding-top: 10px;
+}
+
+.container .card h1 {
+    color: var(--card-header);
+    font-weight: 700;
+    font-family: Overpass;
+    margin: 10px 0;
+}
+
+.container .card p {
+    color: var(--card-text);
+    font-weight: 400;
+    margin: 20px 0;
+}
+
+.container .card .rating__scale {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.container .card .rating__submit {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.container .card .rating__scale--option {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--body-background);
+    color: var(--card-text);
+    font-family: Overpass;
+    font-size: 15px;
+    font-weight: 400;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 5px;
+}
+
+.container .card .rating__scale--option:hover {
+    cursor: pointer;
+}
+
+.container .card .rating__scale--option:active {
+    background-color: var(--submit-btn);
+    color: var(--card-header);
+}
+
+
+
+.container .card .rating__scale--option:focus {
+    background-color: var(--submit-btn);
+    color: var(--card-header);
+}
+
+
+.container .card .rating__submit {
+    background-color: var(--submit-btn);
+    border: none;
+    font-weight: 400;
+    text-transform: capitalize;
+    width: 300px;
+    margin: 20px 0;
+    padding: 10px;
+    border-radius: 20px;
+    align-self: center;
+}
+
+.container .card .rating__submit:hover {
+    opacity: 80%;
+    cursor: pointer;
+}
+
+.container .card rating__submit:active {
+    background-color: var(--submit-btn);
+}
+
+.rating__submit {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-style: bold;
+    font-weight: 400;
+    color: var(--card-header);
+    font-family: Overpass;
+    font-size: 1rem;
+}
+
+.thanks__rating {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 25px 0;
+    font-family: Overpass;
+    color: var(--submit-btn);
+    width: 170px;
+    height: 20px;
+    padding: 2px;
+    border-radius: 20px;
+    background-color: var(--card-header);
+}
+
+/* MEDIA QUERIES */
+
+
+@media only screen and (max-width: 1440px) {
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .container .card {
+        display: flex;
+        flex-direction: column;
+        margin: 10px;
+    }
+
+    .container .card .rating__scale--option {
+      
+        text-align: center;
+        font-size: 15px;
+        font-weight: 400;
+        border: none;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin: 5px;
+    }
+
+    .container .card .rating__scale {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container .card .rating__submit {
+       
+        font-weight: 400;
+        width: 200px;
+        margin: 20px 0;
+        padding: 10px;
+        border-radius: 20px;
+        align-self: center;
+    }
+}
